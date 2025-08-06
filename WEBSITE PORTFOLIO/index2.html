@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    <title>Prashasti - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(42, 42, 131);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white
+        }
+
+        nav ul li a:hover {
+            color: rgb(152, 152, 243);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border-bottom: 1px;
+            width: 95%;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 0 auto 20px auto;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px
+        }
+
+        .firstSection>div {
+            width: 30%;
+            height: 30%;
+        }
+
+        .leftSection {
+            font-size: 2rem
+        }
+
+        .leftSection .btn {
+            background-color: #9899b9;
+            padding: 4px;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(167, 99, 231);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(167, 99, 231);
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 10%;
+            background: rgb(0, 0, 33);
+        }
+
+        .about-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-img img {
+            width: 250px;
+            border-radius: 50%;
+            border: black;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .about-img img:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 0px 20px yellow;
+        }
+
+        .about-text {
+            flex: 2;
+            padding-left: 40px;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: yellow;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .about-text h2:hover {
+            color: #ffcc00;
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            color: #f0f0f0;
+            margin-bottom: 20px;
+        }
+
+        #about {
+            scroll-margin-top: 100px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 8px 16px;
+            background-color: transparent;
+            border: 2px solid yellow;
+            border-radius: 20px;
+            color: yellow;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill:hover {
+            background-color: yellow;
+            color: black;
+            transform: translateY(-3px);
+        }
+
+        #skills {
+            scroll-margin-top: 100px;
+        }
+
+        .education {
+            padding: 20px;
+            background-color: rgb(0, 0, 33);
+            font-family: sans-serif;
+        }
+
+        .education h3 {
+            font-size: 24px;
+            color: white;
+            border-bottom: 3px solid yellow;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .education img {
+            max-width: 40px;
+            /* icon size */
+            height: auto;
+            margin-right: 15px;
+            padding-left: 70px;
+        }
+
+        .education ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .education ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .education ul li i {
+            font-size: 24px;
+            color: rgb(103, 157, 228);
+            margin-right: 10px;
+            margin-top: 4px;
+            /* aligns icon with text */
+        }
+
+        .education h5 {
+            font-size: 18px;
+            color: rgb(103, 157, 228);
+            margin: 0 0 5px;
+        }
+
+        .education p {
+            font-size: 14px;
+            color: white;
+            margin: 0;
+        }
+
+        .skills-section {
+            padding: 60px 10%;
+            background: linear-gradient(135deg, #000428, #004e92);
+            text-align: center;
+        }
+
+        .skills-section h2 {
+            font-size: 32px;
+            color: yellow;
+            margin-bottom: 40px;
+            transition: color 0.3s ease;
+        }
+
+        .skills-section h2:hover {
+            color: #ffcc00;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid yellow;
+            border-radius: 15px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card h3 {
+            color: yellow;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .skill-card:hover {
+            background-color: yellow;
+            color: black;
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 20px yellow;
+        }
+
+        .skill-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .skill-card:hover h3 {
+            color: black;
+        }
+
+        .work-experience-title {
+            font-size: 25px;
+            display: inline-block;
+            border-bottom: 4px solid yellow;
+            padding-bottom: 4px;
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            position: relative;
+            color: rgb(103, 157, 228);
+
+            ;
+
+        }
+
+        .timeline-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            padding: 0;
+            border-radius: 0;
+            border: 0;
+            object-fit: contain;
+        }
+
+        .timeline-content h5 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .timeline-content p {
+            margin: 5px 0 0;
+            color: white;
+            font-size: 15px;
+
+        }
+
+        .services {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: white;
+            border-bottom: 3px solid yellow;
+            margin-bottom: 30px;
+            text-align: left;
+            width: 100%;
+            padding-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover on the title */
+        .section-title:hover {
+            color: #ffeb3b;
+        }
+
+        .service-block {
+            margin-bottom: 40px;
+        }
+
+        .service-block h3 {
+            font-size: 32px;
+            color: rgb(103, 157, 228);
+            ;
+            border-bottom: 3px solid rgb(103, 157, 228);
+            margin-bottom: 30px;
+            text-align: left;
+            width: 100%;
+            padding-left: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-block h3:hover {
+            color: #00FF7F;
+            transform: translateX(5px);
+        }
+
+        .service-block img {
+            width: 40px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .service-block h3:hover img {
+            transform: rotate(90deg);
+        }
+
+        .service-block ul {
+            list-style: none;
+            padding-left: 25px;
+        }
+
+        .service-block ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            position: relative;
+            padding-left: 12px;
+            transition: color 0.2s ease;
+        }
+
+        .service-block ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: black;
+        }
+
+        .service-block ul li:hover {
+            color: #ccc07b;
+        }
+
+        #service {
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section {
+            padding: 60px 10%;
+            background: rgb(0, 0, 33);
+            text-align: center;
+        }
+
+        .policy-section h2 {
+            font-size: 32px;
+            color: rgb(103, 157, 228);
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .policy-section h2:hover {
+            color: #ffcc00;
+        }
+
+        .policy-intro {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 16px;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .policy-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .policy-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 2px solid yellow;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .policy-card h3 {
+            color: rgb(103, 157, 228);
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .policy-card p {
+            font-size: 14px;
+            color: #ddd;
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+
+        .policy-card:hover {
+            background-color: rgb(103, 157, 228);
+            color: black;
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 20px yellow;
+        }
+
+        .policy-card:hover h3 {
+            color: black;
+        }
+
+        .policy-card:hover p {
+            color: black;
+        }
+
+        footer {
+            background-color: rgb(19, 19, 24);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: center;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Prashasti's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/galleryy/WEBSITE%20PORTFOLIO/index2.html">Home</a></li>
+                    <li><a href="#service">Service </a>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="https://github.com/prashasti27696">Projects</a></li>
+                    <li><a href="mailto: prashasti2421077@akgec.ac.in">Contact Me</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Prashasti</span>
+                <div>I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="resume.pdf">Download Resume</a></button>
+
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="devimg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <!-- ===== About Section Start ===== -->
+        <section class="about-section">
+            <div class="about-img">
+                <img src="ghibli.jpeg" alt="Your Photo">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <section id="about">
+                    <p>Hello! I'm a passionate Full Stack Developer specializing in building dynamic and responsive web
+                        applications. I love solving complex problems and bringing creative ideas to life through clean,
+                        efficient code.</p>
+                    <div class="skills">
+                        <div class="skill">Express.js</div>
+                        <div class="skill">Node.js</div>
+                        <div class="skill">React.js</div>
+                        <div class="skill">MongoDB</div>
+                        <div class="skill">MERN Stack</div>
+                    </div>
+            </div>
+        </section>
+        </section>
+        <hr>
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <section class="education">
+            <h3>Education</h3>
+
+            <ul>
+                <li>
+                    <img src="gradu.png" alt="Icon">
+                    <div>
+                        <h5>Higher Secondary (2013)</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quibusdam id nam ut velit
+                            necessitatibus
+                            unde deserunt, architecto quisquam totam eos iure culpa at, sunt modi.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="gradu.png" alt="Icon">
+                    <div>
+                        <h5>Bachelor's in Technology (2013-17)</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quibusdam id nam ut velit
+                            necessitatibus
+                            unde deserunt, architecto quisquam totam eos iure culpa at, sunt modi.</p>
+                    </div>
+                </li>
+            </ul>
+            </hr>
+        </section>
+        <hr>
+        <!-- ===== Skills Section Start ===== -->
+        <section class="skills-section">
+            <h2>My Skills</h2>
+            <section id="skills">
+                <div class="skills-container">
+                    <div class="skill-card">
+                        <img src="express-icon.png" alt="Express.js">
+                        <h3>Express.js</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="nodejs-icon.png" alt="Node.js">
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="react-icon.png" alt="React.js">
+                        <h3>React.js</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="mongodb-icon.png" alt="MongoDB">
+                        <h3>MongoDB</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="mern-icon.png" alt="MERN Stack">
+                        <h3>MERN Stack</h3>
+                    </div>
+                </div>
+            </section>
+        </section>
+        </hr>
+        <hr>
+        <h3 class="work-experience-title">Work Experience</h3>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <img src="expressjs.png" alt="ExpressJs" class="timeline-icon">
+                <div class="timeline-content">
+                    <h5>ExpressJs Developer (2018-2019)</h5>
+                    <p>Built scalable server side applications and RESTful APIs using Express.js.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <img src="nodejs.png" alt="NodeJs" class="timeline-icon">
+                <div class="timeline-content">
+                    <h5>NodeJs Developer (2019-2022)</h5>
+                    <p> Developed high performance backend services and real time applications with Node.js.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <img src="reactjs.png" .png" alt="ReactJs" class="timeline-icon">
+                <div class="timeline-content">
+                    <h5>ReactJs Developer (2022-2023)</h5>
+                    <p>Created dynamic, responsive, and interactive user interfaces with React.js.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <img src="mongodb.jpeg" alt="MongoDB" class="timeline-icon">
+                <div class="timeline-content">
+                    <h5>MongoDB Developer (2023-2024)</h5>
+                    <p>Designed and optimized NoSQL databases and queries using MongoDB.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <img src="mern.png" alt="MERN" class="timeline-icon">
+                <div class="timeline-content">
+                    <h5>MERN Developer (2024-2025)</h5>
+                    <p>Developed full stack web applications using MongoDB, Express.js, React.js, and Node.js.</p>
+                </div>
+            </div>
+            </section>
+            </hr>
+            <hr>
+            <section class="fourthSection">
+                <section class="services">
+                    <h2 class="section-title">Services</h2>
+                    <section id="service">
+                        <div class="service-block">
+                            <h3><span class="arrow"><img src="arrows.png" alt=""></span> Front-End Development</h3>
+                            <ul>
+                                <li>Responsive website design (mobile-friendly layouts)</li>
+                                <li>Single Page Application development</li>
+                                <li>UI/UX design implementation</li>
+                                <li>JavaScript development</li>
+                                <li>React.js development</li>
+                                <li>Website performance optimization</li>
+                                <li>Animation and interactive UI elements</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-block">
+                            <h3><span class="arrow"><img src="arrows.png" alt=""></span> eCommerce Development</h3>
+                            <ul>
+                                <li>Custom ecommerce website design</li>
+                                <li>Shopify / WooCommerce / Magento store setup</li>
+                                <li>Product catalog and category management</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                </hr>
+                <hr>
+                <section class="policy-section">
+                    <section id="policy">
+                        <h2>My Work Policy</h2>
+                        <p class="policy-intro">
+                            I believe in transparency, quality, and collaboration at every stage of a project.
+                            These principles define how I work with clients and deliver successful results.
+                        </p>
+
+                        <div class="policy-container">
+                            <div class="policy-card">
+                                <h3>Clear Communication</h3>
+                                <p>Regular updates, open channels, and complete clarity on timelines and progress.</p>
+                            </div>
+
+                            <div class="policy-card">
+                                <h3>On-Time Delivery</h3>
+                                <p>Strict adherence to deadlines while maintaining the highest quality standards.</p>
+                            </div>
+
+                            <div class="policy-card">
+                                <h3>Client-Centric Approach</h3>
+                                <p>Custom solutions designed to meet your specific needs and business goals.</p>
+                            </div>
+
+                            <div class="policy-card">
+                                <h3>Confidentiality</h3>
+                                <p>All client data, designs, and ideas are kept secure and never shared without consent.
+                                </p>
+                            </div>
+
+                            <div class="policy-card">
+                                <h3>Quality Assurance</h3>
+                                <p>Thorough testing and reviews to ensure bug-free and optimized deliverables.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                </hr>
+            </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="Social Media">
+                <div class="social-links">
+                    <a href="https://github.com/prashasti27696" target="_blank">
+                        <img src="git.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/prashastisriv" target="_blank">
+                        <img src="linkdn.png" alt="LinkedIn">
+                    </a>
+                    <a href="mailto: prashasti2421077@akgec.ac.in">
+                        <img src="mail.png" alt="Email">
+                    </a>
+                </div>
+
+            </div>
+            <div class="footer-first">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/galleryy/WEBSITE%20PORTFOLIO/index2.html">Home</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-second">
+                <ul>
+                    <li><a href="#service">Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-third"></div>
+            <ul>
+
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            </section>
+            <div class="footer-fourth"></div>
+            <ul>
+                <li><a href="#policy">Policy</a></li>
+            </ul>
+            </section>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; prashastisportfolio.com | All rights reserved
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Expressjs Developer', 'Nodejs Developer', 'Reactjs Developer', 'MongoDB Developer', 'Mern Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
